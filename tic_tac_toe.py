@@ -12,14 +12,17 @@ def print_board(board):
     print('--+--+--')
     print(board['low-L'] + ' |' + board['low-M'] + ' |' + board['low-R'])
 
-
-turn = 'X'
-for i in range(9):
+def game_logic():
+    """Game Logic."""
+    turn = "X"
+    for i in range(9):
+        print_board(theBoard)
+        move = input('Turn for ' + turn + ' on which space?: ')
+        theBoard[move] = turn
+        if turn == 'X':
+            turn = 'O'
+        else:
+            turn = 'X'
     print_board(theBoard)
-    move = input('Turn for ' + turn + ' on which space?: ')
-    theBoard[move] = turn
-    if turn == 'X':
-        turn = 'O'
-    else:
-        turn = 'X'
-print_board(theBoard)
+
+game_logic()
