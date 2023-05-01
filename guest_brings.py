@@ -5,17 +5,10 @@ allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
 
 def total_brought(guests, item):
     """brought quantities"""
-    numBrought = 0
-    for k, v in guests.items():
-        numBrought = numBrought + v.get(item, 0)
-    return numBrought
-
-def brough_items(guests, item):
-    """brought items"""
-    numBrought = 0
-    for k, v in guests.items():
-        print(v.get(item, 0))
-    return numBrought
+    num_brought = 0
+    for key, value in guests.items():
+        num_brought = num_brought + value.get(item, 0)
+    return num_brought
 
 print('The guests have brought the following quantities')
 print(' - Ham Sandwiches ' + str(total_brought(allGuests, 'ham sandwiches')))
