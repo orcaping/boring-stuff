@@ -6,7 +6,7 @@ allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
 def total_brought(guests, item):
     """brought quantities"""
     num_brought = 0
-    for key, value in guests.items():
+    for _key, value in guests.items():
         num_brought = num_brought + value.get(item, 0)
     return num_brought
 
