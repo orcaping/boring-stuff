@@ -8,6 +8,7 @@ def total_brought(guests, item):
     num_brought = 0
     for key, value in guests.items():
         num_brought = num_brought + value.get(item, 0)
+        key = key
     return num_brought
 
 print('The guests have brought the following quantities')
