@@ -15,7 +15,8 @@ def print_board(board):
 def game_logic():
     """Game Logic."""
     turn = "X"
-    for i in range(9):
+    i = 0
+    while i <= 9:
         print_board(theBoard)
         move = input('Turn for ' + turn + ' on which space?: ')
         theBoard[move] = turn
@@ -23,6 +24,7 @@ def game_logic():
             turn = 'O'
         else:
             turn = 'X'
+    i += 1
     print_board(theBoard)
 
 game_logic()
