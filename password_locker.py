@@ -1,15 +1,14 @@
 """Password Locker - Projectgit  Chapter 6"""
 import pyperclip
 
-logins = {'Youtube': 'liaubflsufbl4vlu4pufhlsiufe', 
-          'Google': 'mn,bxhvbleuwprupqiuerqegzoefqu9382'}
+logins = {'Youtube': 'liaubflsufbl4vlu4pufhlsiufe', 'Google': 'mn,bxhvbleuwprupqiuerqegzoefqu9382'}
 
 while True:
     name = input("Enter an account (blank to quit!): ")
     if name == '':
         break
     if name == '/help':
-        for key in logins.keys():
+        for key in logins:
             print(key)
 
     if name in logins:
