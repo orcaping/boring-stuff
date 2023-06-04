@@ -8,6 +8,7 @@ while True:
     if name == '':
         break
     if name == '/help':
+        print("Following passwords are stored in this database:")
         for key in logins:
             print(key)
 
